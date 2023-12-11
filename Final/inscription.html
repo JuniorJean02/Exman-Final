@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form id ="coordonnees">
+        <fieldset>
+            <legend><strong>Vos coordonnees</strong> </legend>
+        <label for="nom"><strong>Nom :</strong></label>
+  <input type="text" id="nom" name="nom" required>
+
+  <label for="prenom"><strong>Prenom :</strong></label>
+  <input type="text" id="prenom" name="prenom" required>
+
+  <label for="date_naissance">Date de naissance :</label>
+  <input type="date" id="date_naissance" name="date_naissance">
+
+  <label for="email">Mail :</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="site_web">Votre site :</label>
+  <input type="url" id="site" name="site">
+
+  <label for="mot_de_passe">Mot de passe :</label>
+  <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+  
+  <div id="genre">
+    <label>Genre :</label>
+    <input type="radio" id="homme" name="genre" value="homme">
+    <label for="homme">Homme</label>
+
+    <input type="radio" id="femme" name="genre" value="femme">
+    <label for="femme">Femme</label>
+  </div>
+
+  <label for="pays">Pays :</label>
+  <select id="pays" name="pays">
+
+    <option value="vtpays">Votre pays</option>
+    <optgroup label="Afrique">
+        <option value="Tunis">Tunis</option>
+        <option value="Algerie">Algerie</option>
+        <option value="Maroc">Maroc</option>
+        <option value="Mauritanie">Mauritanie</option>
+
+    <optgroup label="Europe">
+      <option value="france">France</option>
+      <option value="Belgique">Belgique</option>
+      <option value="Italie">Italie</option>
+      <option value="Allemagne">Allemagne</option>
+
+      <optgroup label="Amerique">
+        <option value="Etats-Unis">Etats-Unis</option>
+        <option value="Canada">Canada</option>
+        <option value="Argentine">Argentine</option>
+        <option value="Brazil">Brazil</option>
+
+        <optgroup label="Autres">
+            <option value="Europe">Europe</option>
+            <option value="Asie">Asie</option>
+            <option value="Amerique">Amerique</option>
+            <option value="Oceanie">Oceanie</option>
+    </select>
+    </fieldset>
+    </form>
+ <form id = "formations">
+    <fieldset>
+        <legend><strong>Vos formations</strong></legend>
+    <label>Formations :</label>
+    <input type="checkbox" id="formation1" name="formation1" value="formation1">
+    <label for="formation1">Formation en HMTL5</label>
+  
+    <input type="checkbox" id="formation2" name="formation2" value="formation2">
+    <label for="formation2">Formation en CSS3</label>
+  
+    <input type="checkbox" id="formation3" name="formation3" value="formation3">
+    <label for="formation3">Formation JS</label>
+  
+    <label for="commentaires"></label>
+    <textarea id="commentaires" name="commentaires" rows="5" cols="50"></textarea>
+    </fieldset>
+ </form>
+
+ <form id="photo">
+    <fieldset>
+        <legend> <strong>Envoyez nous votre photo</strong></legend>
+        <label for="fichier"></label>
+  <input type="file" id="fichier" name="fichier" accept=".pdf, .doc, .docx">
+
+  <input type="hidden" name="MAX_FILE_SIZE" value="10240"> 
+  <button type="reset">Effacer</button>
+  <button type="button" onclick="validerFormulaire()" >Envoyer</button>
+    </fieldset>
+    </form>
+</body>
+<script src="inscription.js"></script>
+</html>
